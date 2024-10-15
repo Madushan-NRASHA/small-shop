@@ -6,4 +6,7 @@ use App\Http\Controllers\PostController;
 //     return view('welcome');
 // });
 
-Route::get('/', [PostController::class, 'ClientRegister'])->name('user.registration');
+Route::post('/', [PostController::class, 'ClientRegister'])->name('user.registration');
+// Route::get('/login',[PostController::class,'login'])->name('user.login');
+Route::post('/login', [PostController::class, 'login'])->name('user.login');
+Route::post('/register',[PostController::class,'register']);

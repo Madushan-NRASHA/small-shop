@@ -9,7 +9,8 @@
                     <h4>Register</h4>
                 </div>
                 <div class="card-body">
-                    <form  method="POST" enctype="multipart/form-data">
+                    <!-- <form action="{{ route('user.login') }}" method="POST" enctype="multipart/form-data"> -->
+                    <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
                         @csrf <!-- CSRF token for Laravel security -->
 
                         <!-- Name input -->
@@ -21,7 +22,7 @@
                         <!-- Age input -->
                         <div class="mb-3">
                             <label for="age" class="form-label">Age</label>
-                            <input type="number" name="age" class="form-control" id="age" placeholder="Enter your age" required>
+                              <input type="number" name="age" class="form-control" id="age" placeholder="Enter your age" required>
                         </div>
 
                         <!-- Email input -->
@@ -50,8 +51,6 @@
 
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary w-100">Register</button>
-
-                        <h6>Already Have Account</h6>
                     </form>
                 </div>
             </div>

@@ -11,12 +11,13 @@ class PostController extends Controller
     public function ClientRegister(){
         return view('User.Registration'); 
     }
+   
     public function register(Request $request){
         $validate=$validate([
             'name'=>'required|string|max:255',
             'age'=>'required|integer',
             'email'=>'required|string|email|max:255|unique:users',
-            'image'=>'required|image|mimes:jpeg,png,jpg,,gif|max:2048',
+            'image'=>'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'password'=>'required|string|min:8|confirmed',    
 
         ]);
@@ -37,4 +38,8 @@ class PostController extends Controller
 
         // return redirect()->intended
     }
+    public function login(){
+        return view('User.login');
+    }
+   
 }

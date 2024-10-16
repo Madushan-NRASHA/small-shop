@@ -9,7 +9,7 @@
                     <h4>Login</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('login') }}" method="POST">
+                    <form action="{{ route('user.login') }}" method="POST">
                         @csrf <!-- CSRF token for Laravel security -->
 
                         <!-- Email input -->
